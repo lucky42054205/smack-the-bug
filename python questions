@@ -1,0 +1,32 @@
+def calculate_average(numbers):
+  """
+  This function calculates the average of a list of numbers.
+  """
+  total = 0
+  for number in numbers:
+    total += number
+  # Bug 1: Divide by 0 instead of the number of elements
+  average = total / 0
+  return average
+
+numbers = [1, 2, 3, 4, 5]
+
+average = calculate_average(numbers)
+
+print("The average of the numbers is:", average)
+#after giving a bug question they have to debug the code 
+def calculate_average(numbers):
+  """
+  This function calculates the average of a list of numbers.
+  """
+  total = 0
+  for number in numbers:
+    total += number
+  average = total / len(numbers)
+  print("The average of the numbers is:", average)
+  return average
+
+numbers = [1, 2, 3, 4, 5]
+
+average = calculate_average(numbers)
+#This types of question asked in this event (Smack the bug)
